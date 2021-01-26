@@ -2,7 +2,7 @@ function recursion(index, list, result, cube){
 
     if(index == list.length)
         return;
-    result[index] = cube(list[index])
+    result.push(cube(list[index]))
     recursion(index + 1, list, result, cube)
 }
 
