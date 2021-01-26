@@ -1,16 +1,16 @@
-function recursion(index, list, result, cube){
+function recursion(index, list, result, func){
 
     if(index == list.length)
         return;
-    result.push(cube(list[index]))
-    recursion(index + 1, list, result, cube)
+    result.push(func(list[index]))
+    recursion(index + 1, list, result, func)
 }
 
-const map = (list, cube) => {
+const map = (list, func) => {
     
     let result = []
 
-    recursion(0, list, result, cube)
+    recursion(0, list, result, func)
     return result;
 }  
 
